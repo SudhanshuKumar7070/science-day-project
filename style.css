@@ -1,0 +1,251 @@
+/* *
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  */
+body {
+    
+    text-align: center;
+    color: antiquewhite; 
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+    background: #0c192c;
+    
+}
+
+.multicolortext {
+    background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.bgclr
+{   width: 100%;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.bubbles 
+{
+    position: relative;
+    display: flex;
+}
+.bubbles span 
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(120s / var(--i));
+}
+.bubbles span:nth-child(even)
+{
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(150vh) scale(-0.5);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+marquee {
+    color: red;
+    font-style: italic;
+    font-size: small;
+}
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* body {
+    
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(
+        to right, #833ab4,
+        #fd1d1d, #fcb045);
+    background-size: 400% 400%;
+    animation: animate-background 10s infinite ease-in-out;
+    text-align: center;
+    color: antiquewhite; 
+    font-weight: bold;
+}
+
+@keyframes animate-background {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    } 
+} */
+
+button {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: inherit;
+    outline: 2px solid #fff;
+    padding: auto;
+    
+    position: relative;
+    overflow: hidden;
+    transition: color 1s;
+}
+button:hover {
+    color: initial;
+    animation: pulsate 1s ease-in-out;
+}
+button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: #833ab4;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: width 1s;
+}
+button:hover::before{
+    width: 150%;
+}
+ @keyframes pulsate {
+    0%{
+        box-shadow:
+        0 0 25px purple,
+        0 0 50px black;
+    }
+} 
+input {
+    width: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(95, 147, 65);
+    margin-bottom: 4px;
+}
+input:hover {
+    animation: pulsate 1s ease-in-out;
+}
+@keyframes pulsate {
+    0%{
+        box-shadow:
+        0 0 25px navy,
+        0 0 50px aqua;
+    }
+}
+select {
+    position:center;
+    
+    align-items: center;
+    justify-content: space-between;
+    background-color: initial;
+    padding: 15px;
+    color: white;
+    border-radius: 100px;
+}
+option {
+    color: white;
+    background-color: black;
+    padding: 15px;
+    border-radius: 2px;
+
+}
+
+input {
+    background-color: inherit;
+    border-style: dashed;
+    color: #ff2d75;
+    border-radius: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding: 15px;
+    border: 2px solid whitesmoke;
+    margin: .4rem;
+}
+
+p {
+    color: initial;
+    font-weight: bold;
+    flex: content;
+    flex-wrap: wrap;
+    font-size: large;
+}
+
+#legend {
+  color: cyan;
+  background-color: #999;
+  padding: 5px 10px;
+  border-radius: 2px;
+  border: 0;
+  font-size: 14px;
+}
+
+#ans {
+    color: lightgreen;
+    font-weight: bold;
+    flex: content;
+    flex-wrap: wrap;
+    font-size: large;
+}
+
+div {
+    margin-bottom: 10px;
+  }
+  
+  fieldset {
+    
+    background: inherit;
+    border: 2px solid #833ab4;
+    text-align: justify;
+    border-radius: 5px;
+  }
+  
+  legend {
+    padding: 10px;
+    background:linear-gradient(135deg, grey 45%,#833ab4, cyan);
+    border-radius: 2px; 
+    color: cyan;  
+  }
+
+button:hover,
+button:focus {
+  color: #999;
+}
+
+button:active {
+  background-color: white;
+  color: white;
+  outline: 1px solid black;
+} 
+#btn{
+    color: white;
+}

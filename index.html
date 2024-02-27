@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head> <title>DIFFRACTION</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+      <h1>
+        <span class="multicolortext">DIFFRACTION Calc!</span>
+      </h1>
+          <form id="myform">
+            
+            <div id="bgclr">
+              <div class="bubbles">
+                <span style="--i:11;"></span>
+                <span style="--i:12;"></span>
+                <span style="--i:24;"></span>
+                <span style="--i:10;"></span>
+                <span style="--i:14;"></span>
+                <span style="--i:23;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:16;"></span>
+                <span style="--i:19;"></span>
+                <span style="--i:20;"></span>
+                <span style="--i:22;"></span>
+                <span style="--i:25;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:21;"></span>
+                <span style="--i:15;"></span>
+                <span style="--i:13;"></span>
+                <span style="--i:26;"></span>
+                <span style="--i:17;"></span>
+                <span style="--i:13;"></span>
+                <span style="--i:28;"></span>
+                <span style="--i:11;"></span>
+                <span style="--i:12;"></span>
+                <span style="--i:24;"></span>
+                <span style="--i:10;"></span>
+                <span style="--i:14;"></span>
+                <span style="--i:23;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:16;"></span>
+                <span style="--i:19;"></span>
+                <span style="--i:20;"></span>
+                <span style="--i:22;"></span>
+                <span style="--i:25;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:21;"></span>
+                <span style="--i:15;"></span>
+                <span style="--i:13;"></span>
+                <span style="--i:26;"></span>
+                <span style="--i:17;"></span>
+                <span style="--i:13;"></span>
+                <span style="--i:28;"></span>
+              </div></div>
+
+            <fieldset>
+            <legend id="legend">Select the diffraction pattern observed</legend>
+            <input type ="radio" id="Radio1" name="pattern" onchange="radioCheck()"> <span>SINGLE SLIT</span>
+            <input type ="radio" id="Radio2" name="pattern" onchange="radioCheck()"><span> DOUBLE SLIT</span>
+          </fieldset>
+
+            <br>
+            <!-- for checkbox -->
+          <fieldset>
+          <legend>Choose the given</legend>
+          <input type="checkbox" id="myCheck1" onchange="myFunct()"><label> Distance a</label><div></div>
+          <input type="checkbox" id="myCheck2" onchange="myFunct()" class="double"><label class="doubleL">Distance b</label><div></div>
+          <input type="checkbox" id="myCheck3" onchange="myFunct()"><label>Angle(theta)</label><div></div>
+          <input type="checkbox" id="myCheck4" onchange="myFunct()"><label>Order of spectrum</label><div></div>
+          <input type="checkbox" id="myCheck5" onchange="myFunct()"><label>Distance between slit and screen(D)</label><div></div>
+          <input type="checkbox" id="myCheck6" onchange="myFunct()" class="double"><label class="doubleL">Beta</label><div></div>
+          <input type="checkbox" id="myCheck7" onchange="myFunct()" class="double"><label class="doubleL">Missing order(m)</label><div></div>
+          <input type="checkbox" id="myCheck8" onchange="myFunct()"><label>Wavelength</label><div></div>
+          <input type="checkbox" id="myCheck9" onchange="myFunct()"><label>Diffraction Grating(N)</label><div></div>
+          <input type="checkbox" id="myCheck10" onchange="myFunct()"><label>First minima at</label><div></div>
+        </fieldset>
+
+        <p id="para2">What you need to calculate?</p>
+        
+        <select name='allOption'  id="opt-el" onchange="selectedOpt()">
+            <option class='head' selected="selected" disabled>--SELECT OPTION--</option>
+        
+            <option>Wavelength</option>
+            <option>Angle</option>
+            <option>Order of Spectrum</option>
+            
+          </select><br>
+          
+          
+          <div id="distanceA"></div><br> <!-- for a -->
+          <div id="container"></div><br> <!--to add input button in js for value of b-->
+          <div id="slideAngle"></div>
+          <div id="order"></div><br>
+          <div id="wavelength"></div><br>
+          <div id="orderOfm"></div>
+          <div id="D"></div>
+          <div id="beta"></div>
+          <div id="N"></div>
+          <div id="firstMin"></div>
+          <br><br>
+          <p id="ans">ANS: </p>
+        </form>
+        
+        <div id="button"></div><br>
+        <button id="btn" onclick="resetFunc()" >Click to RESET</button>
+        
+        <p id="cmt"></p>
+        <!-- <marquee>This is a physics project and soon you can view the solution of the given question, Thank you! for visiting</marquee> -->
+        <script src="index4.js"></script>
+    </body>
+</html>
